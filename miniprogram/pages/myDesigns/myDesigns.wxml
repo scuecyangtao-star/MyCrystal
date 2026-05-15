@@ -1,0 +1,21 @@
+<view class="designs-page">
+  <view class="list" wx:if="{{designs.length>0}}">
+    <view wx:for="{{designs}}" wx:key="id" class="design-card">
+      <view class="design-preview">
+        <view wx:for="{{item.previewItems}}" wx:for-item="bead" wx:key="id" class="bead" style="background:{{bead.color}}">{{bead.name}}</view>
+      </view>
+      <view class="design-info">
+        <text class="design-name">{{item.productName}}</text>
+        <text class="design-time">{{item.createTimeStr}}</text>
+      </view>
+      <view class="design-actions">
+        <button size="mini" bindtap="useDesign" data-item="{{item}}">继续编辑</button>
+        <button size="mini" plain bindtap="createOrderFromDesign" data-item="{{item}}">下单</button>
+      </view>
+    </view>
+  </view>
+  <view class="empty" wx:else>
+    <text>暂无设计，去首页DIY吧</text>
+    <button class="go-btn" bindtap="goHome">去DIY</button>
+  </view>
+</view>

@@ -1,0 +1,17 @@
+<view class="addr-page">
+  <view class="addr-list" wx:if="{{list.length>0}}">
+    <view wx:for="{{list}}" wx:key="id" class="addr-card">
+      <view class="addr-main">
+        <text class="addr-name">{{item.name}}</text>
+        <text class="addr-phone">{{item.phone}}</text>
+      </view>
+      <view class="addr-detail">{{item.region}} {{item.detail}}</view>
+    </view>
+  </view>
+  <view class="empty" wx:else>
+    <text>暂无收货地址</text>
+  </view>
+  <view class="add-btn" bindtap="addAddress">
+    <text>+ 添加新地址</text>
+  </view>
+</view>

@@ -1,0 +1,14 @@
+<view class="tab-bar">
+  <view class="tab-item {{current === 'index' ? 'active' : ''}}" bindtap="switchTab" data-path="index">
+    <text class="tab-icon">首页</text>
+    <text class="tab-text">首页</text>
+  </view>
+  <view class="tab-item {{current === 'orders' ? 'active' : ''}}" bindtap="switchTab" data-path="orders">
+    <text class="tab-icon">订单</text>
+    <text class="tab-text">订单</text>
+  </view>
+  <view class="tab-item {{current === 'profile' ? 'active' : ''}}" bindtap="switchTab" data-path="profile">
+    <text class="tab-icon">我的</text>
+    <text class="tab-text">我的</text>
+  </view>
+</view>

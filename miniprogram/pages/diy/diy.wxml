@@ -1,0 +1,54 @@
+<view class="diy-page">
+  <view class="product-header">{{productName}} · DIY</view>
+
+  <view class="steps">
+    <view class="step-item {{stepIndex >= 0 ? 'done' : ''}} {{stepIndex === 0 ? 'active' : ''}}" data-step="0" bindtap="setStep">1.主题</view>
+    <view class="step-item {{stepIndex >= 1 ? 'done' : ''}} {{stepIndex === 1 ? 'active' : ''}}" data-step="1" bindtap="setStep">2.主珠</view>
+    <view class="step-item {{stepIndex >= 2 ? 'done' : ''}} {{stepIndex === 2 ? 'active' : ''}}" data-step="2" bindtap="setStep">3.配珠</view>
+    <view class="step-item {{stepIndex >= 3 ? 'done' : ''}} {{stepIndex === 3 ? 'active' : ''}}" data-step="3" bindtap="setStep">4.吊坠/挂扣</view>
+  </view>
+
+  <view class="preview-area">
+    <view class="preview-label">预览</view>
+    <view class="preview-box">
+      <view wx:for="{{previewItems}}" wx:key="id" class="preview-bead" style="background:{{item.color}}">{{item.name}}</view>
+    </view>
+    <view class="preview-price">¥ {{totalPrice}}</view>
+  </view>
+
+  <view class="element-area">
+    <scroll-view scroll-y class="element-list">
+      <block wx:if="{{stepIndex === 0}}">
+        <view wx:for="{{themes}}" wx:key="id" class="element-item {{selectedTheme === item.id ? 'selected' : ''}}" bindtap="selectTheme" data-id="{{item.id}}" data-name="{{item.name}}">
+          <view class="element-dot" style="background:{{item.color}}"></view>
+          <text>{{item.name}}</text>
+        </view>
+      </block>
+      <block wx:if="{{stepIndex === 1}}">
+        <view wx:for="{{mainBeads}}" wx:key="id" class="element-item {{selectedMain === item.id ? 'selected' : ''}}" bindtap="selectMain" data-item="{{item}}">
+          <view class="element-dot" style="background:#d4a853"></view>
+          <text>{{item.name}} ¥{{item.price}}</text>
+        </view>
+      </block>
+      <block wx:if="{{stepIndex === 2}}">
+        <view wx:for="{{subBeads}}" wx:key="id" class="element-item" bindtap="toggleSub" data-item="{{item}}">
+          <view class="element-dot" style="background:#888"></view>
+          <text>{{item.name}} ¥{{item.price}}</text>
+          <text wx:if="{{subIds.indexOf(item.id)>=0}}" class="check">✓</text>
+        </view>
+      </block>
+      <block wx:if="{{stepIndex === 3}}">
+        <view wx:for="{{charms}}" wx:key="id" class="element-item {{selectedCharm === item.id ? 'selected' : ''}}" bindtap="selectCharm" data-item="{{item}}">
+          <view class="element-dot" style="background:#c9a063"></view>
+          <text>{{item.name}} ¥{{item.price}}</text>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+
+  <view class="bottom-bar">
+    <button class="btn-save" bindtap="saveDesign">保存设计</button>
+    <button class="btn-cart" bindtap="addToCart">加入购物车</button>
+    <button class="btn-order" bindtap="createOrder">立即下单</button>
+  </view>
+</view>

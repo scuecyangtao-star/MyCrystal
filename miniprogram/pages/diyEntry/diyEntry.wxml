@@ -1,0 +1,26 @@
+<!-- DIY 入口 - Tab 页，与首页同级 -->
+<view class="page">
+  <view class="header">
+    <text class="title">开始 DIY</text>
+    <text class="desc">选择产品类型，自由搭配专属饰品</text>
+  </view>
+  <view class="product-grid">
+    <view wx:for="{{productTypes}}" wx:key="id" class="product-card" bindtap="goDiy" data-type="{{item.id}}" data-name="{{item.name}}">
+      <text class="product-icon">{{item.icon}}</text>
+      <text class="product-name">{{item.name}}</text>
+    </view>
+  </view>
+  <view class="section">
+    <text class="section-title">热门模板</text>
+    <view class="template-list">
+      <view wx:for="{{templates}}" wx:key="id" class="template-card" bindtap="useTemplate" data-item="{{item}}">
+        <view class="template-preview"><text class="template-icon">📿</text></view>
+        <view class="template-info">
+          <text class="template-name">{{item.name}}</text>
+          <text class="template-desc">{{item.desc}}</text>
+        </view>
+        <text class="template-btn">选用</text>
+      </view>
+    </view>
+  </view>
+</view>

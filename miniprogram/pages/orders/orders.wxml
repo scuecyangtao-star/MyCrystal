@@ -1,0 +1,21 @@
+<view class="orders-page">
+  <view class="tabs">
+    <view wx:for="{{tabs}}" wx:key="key" class="tab {{currentTab===item.key?'active':''}}" bindtap="switchTab" data-key="{{item.key}}">{{item.label}}</view>
+  </view>
+  <scroll-view scroll-y class="order-list" wx:if="{{filteredOrders.length>0}}">
+    <view wx:for="{{filteredOrders}}" wx:key="id" class="order-card" bindtap="goDetail" data-id="{{item.id}}">
+      <view class="order-header">
+        <text class="order-no">订单 {{item.id}}</text>
+        <text class="order-status {{item.status}}">{{statusText[item.status]}}</text>
+      </view>
+      <view class="order-body">
+        <text class="order-product">{{item.productName}}</text>
+        <text class="order-price">¥{{item.totalPrice}}</text>
+      </view>
+      <view class="order-time">{{item.createTimeStr}}</view>
+    </view>
+  </scroll-view>
+  <view class="empty" wx:else>
+    <text class="empty-text">暂无订单</text>
+  </view>
+</view>

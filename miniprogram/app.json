@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/diyEntry/diyEntry",
+    "pages/cart/cart",
+    "pages/diy/diy",
+    "pages/orders/orders",
+    "pages/orderDetail/orderDetail",
+    "pages/profile/profile",
+    "pages/addressList/addressList",
+    "pages/addressEdit/addressEdit",
+    "pages/confirmOrder/confirmOrder",
+    "pages/myDesigns/myDesigns"
+  ],
+  "window": {
+    "backgroundColor": "#F5F5F5",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTitleText": "DIY饰品",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "#9A9A9A",
+    "selectedColor": "#9A8B78",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "white",
+    "list": [
+      { "pagePath": "pages/index/index", "text": "首页", "iconPath": "images/tab-home.png", "selectedIconPath": "images/tab-home-active.png" },
+      { "pagePath": "pages/diyEntry/diyEntry", "text": "DIY", "iconPath": "images/tab-DIY.png", "selectedIconPath": "images/tab-DIY.png" },
+      { "pagePath": "pages/cart/cart", "text": "购物车", "iconPath": "images/tab-shopping-cart.png", "selectedIconPath": "images/tab-shopping-cart-active.png" },
+      { "pagePath": "pages/profile/profile", "text": "我的", "iconPath": "images/tab-profile.png", "selectedIconPath": "images/tab-profile-active.png" }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "lazyCodeLoading": "requiredComponents"
+}

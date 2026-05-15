@@ -1,0 +1,22 @@
+<!-- 5合1 DIY饰品 - 首页 -->
+<view class="page">
+  <view class="swiper-wrap">
+    <swiper class="banner-swiper" indicator-dots="{{true}}" indicator-color="rgba(255,255,255,0.5)" indicator-active-color="#fff" autoplay circular>
+      <swiper-item wx:for="{{bannerImages}}" wx:key="*this">
+        <image src="{{item}}" mode="aspectFill" class="banner-img" />
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <view class="category-section">
+    <view wx:for="{{productTypes}}" wx:key="id" class="category-row" bindtap="goDiy" data-type="{{item.id}}" data-name="{{item.name}}">
+      <text class="category-text">{{item.name}}</text>
+      <view class="category-icon-wrap">
+        <image wx:if="{{!item.showEmoji}}" class="category-icon" src="{{item.icon}}" mode="aspectFit" binderror="onImgError" data-id="{{item.id}}" />
+        <text wx:else class="category-emoji">{{item.emoji}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="footer-padding"></view>
+</view>

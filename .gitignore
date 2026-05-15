@@ -1,0 +1,13 @@
+# 微信小程序
+node_modules/
+miniprogram_npm/
+
+# 本地私有配置
+project.private.config.json
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 日志
+*.log

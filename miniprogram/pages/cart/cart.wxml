@@ -1,0 +1,23 @@
+<!-- 购物车 Tab 页 -->
+<view class="cart-page">
+  <view class="list" wx:if="{{items.length>0}}">
+    <view wx:for="{{items}}" wx:key="id" class="cart-item">
+      <view class="item-preview">
+        <view wx:for="{{item.previewItems}}" wx:for-item="bead" wx:key="id" class="bead" style="background:{{bead.color}}">{{bead.name}}</view>
+      </view>
+      <view class="item-info">
+        <text class="item-name">{{item.productName}}</text>
+        <text class="item-price">¥{{item.totalPrice}}</text>
+      </view>
+      <view class="item-actions">
+        <text class="btn-del" bindtap="removeItem" data-id="{{item.id}}">删除</text>
+        <button size="mini" class="btn-order" bindtap="checkoutItem" data-item="{{item}}">下单</button>
+      </view>
+    </view>
+  </view>
+  <view class="empty" wx:else>
+    <text>购物车是空的</text>
+    <text class="hint">去 DIY 设计您专属的饰品吧</text>
+    <button class="go-btn" bindtap="goDiy">去 DIY</button>
+  </view>
+</view>

@@ -1,0 +1,20 @@
+<view class="detail-page" wx:if="{{order}}">
+  <view class="status-bar status-{{order.status}}">{{statusText[order.status]}}</view>
+  <view class="card">
+    <view class="card-title">设计信息</view>
+    <view class="preview-row">
+      <view wx:for="{{previewItems}}" wx:key="id" class="preview-bead" style="background:{{item.color}}">{{item.name}}</view>
+    </view>
+    <view class="info-row"><text class="label">产品类型</text><text>{{order.productName}}</text></view>
+    <view class="info-row"><text class="label">订单金额</text><text class="price">¥{{order.totalPrice}}</text></view>
+  </view>
+  <view class="card" wx:if="{{order.address}}">
+    <view class="card-title">收货地址</view>
+    <view class="addr">{{order.address.name}} {{order.address.phone}}</view>
+    <view class="addr">{{order.address.region}} {{order.address.detail}}</view>
+  </view>
+  <view class="card" wx:if="{{order.logistics}}">
+    <view class="card-title">物流信息</view>
+    <view class="addr">{{order.logistics.company}} {{order.logistics.no}}</view>
+  </view>
+</view>
