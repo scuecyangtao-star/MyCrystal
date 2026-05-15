@@ -1,4 +1,4 @@
-const { MAIN_BEADS, SUB_BEADS, CHARMS, calcDesignPrice } = require('../../utils/mockData');
+const { MAIN_BEADS, SUB_BEADS, CHARMS } = require('../../utils/mockData');
 
 const CART_STORAGE = 'diy_cart';
 
@@ -32,24 +32,8 @@ Page({
   },
   checkoutItem(e) {
     const item = e.currentTarget.dataset.item;
-    const order = {
-      id: 'O' + Date.now(),
-      designId: item.id,
-      productType: item.productType,
-      productName: item.productName,
-      elementIds: item.elementIds || [],
-      totalPrice: item.totalPrice,
-      status: 'pending',
-      createTime: Date.now()
-    };
-    const orders = wx.getStorageSync('diy_orders') || [];
-    orders.unshift(order);
-    wx.setStorageSync('diy_orders', orders);
-    let list = wx.getStorageSync(CART_STORAGE) || [];
-    list = list.filter(i => i.id !== item.id);
-    wx.setStorageSync(CART_STORAGE, list);
-    wx.showToast({ title: '下单成功' });
-    setTimeout(() => wx.navigateTo({ url: `/pages/orderDetail/orderDetail?id=${order.id}` }), 800);
+    const params = `productType=${item.productType}&productName=${encodeURIComponent(item.productName)}&elementIds=${encodeURIComponent(JSON.stringify(item.elementIds || []))}&totalPrice=${item.totalPrice}&fromCart=${item.id}`;
+    wx.navigateTo({ url: `/pages/confirmOrder/confirmOrder?${params}` });
   },
   goDiy() {
     wx.switchTab({ url: '/pages/diyEntry/diyEntry' });

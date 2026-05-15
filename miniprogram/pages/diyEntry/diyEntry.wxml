@@ -6,7 +6,7 @@
   </view>
   <view class="product-grid">
     <view wx:for="{{productTypes}}" wx:key="id" class="product-card" bindtap="goDiy" data-type="{{item.id}}" data-name="{{item.name}}">
-      <text class="product-icon">{{item.icon}}</text>
+      <text class="product-icon">{{item.emoji}}</text>
       <text class="product-name">{{item.name}}</text>
     </view>
   </view>

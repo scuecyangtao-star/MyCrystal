@@ -111,17 +111,7 @@ Page({
   createOrder() {
     const { productType, productName, elementIds, totalPrice } = this.data;
     if (elementIds.length === 0) { wx.showToast({ title: '请至少选择主珠', icon: 'none' }); return; }
-    const designId = genDesignId();
-    const order = {
-      id: 'O' + Date.now(),
-      designId, productType, productName, elementIds, totalPrice,
-      status: 'pending',
-      createTime: Date.now()
-    };
-    const list = wx.getStorageSync('diy_orders') || [];
-    list.unshift(order);
-    wx.setStorageSync('diy_orders', list);
-    wx.showToast({ title: '下单成功' });
-    setTimeout(() => wx.navigateTo({ url: `/pages/orderDetail/orderDetail?id=${order.id}` }), 800);
+    const params = `productType=${productType}&productName=${encodeURIComponent(productName)}&elementIds=${encodeURIComponent(JSON.stringify(elementIds))}&totalPrice=${totalPrice}`;
+    wx.navigateTo({ url: `/pages/confirmOrder/confirmOrder?${params}` });
   }
 });

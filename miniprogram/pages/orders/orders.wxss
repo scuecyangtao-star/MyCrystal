@@ -1,0 +1,71 @@
+/* 订单列表 */
+.tabs {
+  display: flex;
+  background: var(--card-bg);
+  padding: 0 24rpx;
+  border-bottom: 1rpx solid var(--border);
+}
+.tab {
+  flex: 1;
+  text-align: center;
+  font-size: 28rpx;
+  color: var(--text-secondary);
+  padding: 28rpx 0;
+  position: relative;
+}
+.tab.active {
+  color: var(--primary);
+  font-weight: var(--font-weight-medium);
+}
+.tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40rpx;
+  height: 4rpx;
+  background: var(--primary);
+  border-radius: 2rpx;
+}
+
+.order-list {
+  padding: 24rpx;
+}
+.order-card {
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  padding: 28rpx;
+  margin-bottom: 16rpx;
+  box-shadow: var(--shadow-card);
+}
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16rpx;
+}
+.order-no {
+  font-size: 24rpx;
+  color: var(--text-tertiary);
+}
+.order-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12rpx;
+}
+.order-product {
+  font-size: 28rpx;
+  font-weight: var(--font-weight-medium);
+  color: var(--text-primary);
+}
+.order-price {
+  font-size: 30rpx;
+  font-weight: var(--font-weight-bold);
+  color: #E85D5D;
+}
+.order-time {
+  font-size: 22rpx;
+  color: var(--text-placeholder);
+}

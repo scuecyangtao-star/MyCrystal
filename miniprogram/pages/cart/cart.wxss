@@ -1,0 +1,39 @@
+/* 购物车 */
+.cart-page {
+  padding: 24rpx;
+}
+
+.cart-item {
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  padding: 28rpx;
+  margin-bottom: 16rpx;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  align-items: center;
+}
+.item-preview {
+  display: flex;
+  margin-right: 20rpx;
+}
+.item-info {
+  flex: 1;
+}
+.item-name {
+  font-size: 28rpx;
+  font-weight: var(--font-weight-medium);
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4rpx;
+}
+.item-price {
+  font-size: 30rpx;
+  font-weight: var(--font-weight-bold);
+  color: #E85D5D;
+}
+.item-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12rpx;
+}

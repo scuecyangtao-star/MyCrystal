@@ -5,10 +5,10 @@ Page({
     this.setData({ list });
   },
   addAddress() {
-    wx.showModal({
-      title: '添加地址',
-      content: '地址管理功能将在后续版本完善，当前为演示版本',
-      showCancel: false
-    });
+    wx.navigateTo({ url: '/pages/addressEdit/addressEdit' });
+  },
+  editAddress(e) {
+    const id = e.currentTarget.dataset.id;
+    wx.navigateTo({ url: `/pages/addressEdit/addressEdit?id=${id}` });
   }
 });

@@ -1,0 +1,51 @@
+/* 我的设计 */
+.designs-page {
+  padding: 24rpx;
+}
+
+.design-card {
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  padding: 28rpx;
+  margin-bottom: 16rpx;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  align-items: center;
+}
+.design-preview {
+  display: flex;
+  margin-right: 20rpx;
+}
+.design-info {
+  flex: 1;
+}
+.design-name {
+  font-size: 28rpx;
+  font-weight: var(--font-weight-medium);
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4rpx;
+}
+.design-time {
+  font-size: 22rpx;
+  color: var(--text-placeholder);
+}
+.design-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10rpx;
+}
+.design-actions button {
+  font-size: 22rpx;
+  padding: 10rpx 20rpx;
+  border-radius: var(--radius-sm);
+  line-height: 1.4;
+  border: 1rpx solid var(--border);
+  background: #fff;
+  color: var(--text-secondary);
+}
+.design-actions button:last-child {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}

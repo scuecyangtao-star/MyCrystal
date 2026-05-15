@@ -1,6 +1,6 @@
 <view class="addr-page">
   <view class="addr-list" wx:if="{{list.length>0}}">
-    <view wx:for="{{list}}" wx:key="id" class="addr-card">
+    <view wx:for="{{list}}" wx:key="id" class="addr-card" bindtap="editAddress" data-id="{{item.id}}">
       <view class="addr-main">
         <text class="addr-name">{{item.name}}</text>
         <text class="addr-phone">{{item.phone}}</text>

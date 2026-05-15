@@ -1,0 +1,153 @@
+/* DIY设计页 */
+.product-header {
+  text-align: center;
+  font-size: 32rpx;
+  font-weight: var(--font-weight-bold);
+  padding: 24rpx;
+  color: var(--text-primary);
+  background: var(--card-bg);
+}
+
+/* 步骤条 */
+.steps {
+  display: flex;
+  background: var(--card-bg);
+  padding: 20rpx 16rpx;
+  border-bottom: 1rpx solid var(--border);
+}
+.step-item {
+  flex: 1;
+  text-align: center;
+  font-size: 22rpx;
+  color: var(--text-placeholder);
+  padding: 8rpx 0;
+  position: relative;
+}
+.step-item.done {
+  color: var(--primary);
+}
+.step-item.active {
+  color: var(--primary);
+  font-weight: var(--font-weight-bold);
+  font-size: 24rpx;
+}
+
+/* 预览区 */
+.preview-area {
+  background: var(--card-bg);
+  margin: 16rpx 24rpx;
+  border-radius: var(--radius-lg);
+  padding: 24rpx;
+  display: flex;
+  align-items: center;
+  box-shadow: var(--shadow-card);
+}
+.preview-label {
+  font-size: 24rpx;
+  color: var(--text-tertiary);
+  margin-right: 16rpx;
+}
+.preview-box {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8rpx;
+}
+.preview-price {
+  font-size: 32rpx;
+  font-weight: var(--font-weight-bold);
+  color: #E85D5D;
+  margin-left: 20rpx;
+}
+
+/* 元素选择区 */
+.element-area {
+  margin: 0 24rpx;
+  flex: 1;
+}
+.element-list {
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  padding: 16rpx 0;
+  box-shadow: var(--shadow-card);
+}
+.element-item {
+  display: flex;
+  align-items: center;
+  padding: 24rpx 32rpx;
+  border-bottom: 1rpx solid var(--border-light);
+  font-size: 28rpx;
+  color: var(--text-primary);
+}
+.element-item:last-child {
+  border-bottom: none;
+}
+.element-item.selected {
+  background: rgba(154,139,120,0.06);
+}
+.element-dot {
+  width: 32rpx;
+  height: 32rpx;
+  border-radius: 50%;
+  margin-right: 16rpx;
+  flex-shrink: 0;
+}
+.check {
+  margin-left: auto;
+  color: var(--primary);
+  font-weight: var(--font-weight-bold);
+  font-size: 32rpx;
+}
+
+/* 底部操作栏 */
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  gap: 16rpx;
+  padding: 20rpx 24rpx;
+  padding-bottom: calc(20rpx + env(safe-area-inset-bottom));
+  background: var(--card-bg);
+  box-shadow: var(--shadow-bar);
+  z-index: 100;
+}
+.btn-save {
+  flex: 1;
+  background: rgba(154,139,120,0.1);
+  color: var(--primary);
+  font-size: 26rpx;
+  border-radius: var(--radius-md);
+  padding: 22rpx 0;
+  border: none;
+  line-height: 1.4;
+}
+.btn-cart {
+  flex: 1;
+  background: var(--primary);
+  color: #fff;
+  font-size: 26rpx;
+  border-radius: var(--radius-md);
+  padding: 22rpx 0;
+  border: none;
+  line-height: 1.4;
+}
+.btn-order {
+  flex: 1.2;
+  background: linear-gradient(135deg, var(--accent), #c9973a);
+  color: #fff;
+  font-size: 26rpx;
+  font-weight: var(--font-weight-medium);
+  border-radius: var(--radius-md);
+  padding: 22rpx 0;
+  border: none;
+  line-height: 1.4;
+}
+
+/* 覆盖全局 btn-order（DIY页面的立即下单按钮更突出） */
+.diy-page .btn-order {
+  background: linear-gradient(135deg, var(--accent), #c9973a) !important;
+  font-size: 26rpx !important;
+  padding: 22rpx 0 !important;
+}

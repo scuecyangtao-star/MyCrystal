@@ -1,0 +1,49 @@
+/* 订单详情 */
+.detail-page {
+  padding: 24rpx;
+}
+
+.status-bar {
+  font-size: 30rpx;
+  font-weight: var(--font-weight-medium);
+  text-align: center;
+  padding: 28rpx;
+  margin: 0 24rpx 24rpx;
+  border-radius: var(--radius-lg);
+}
+.status-pending { background: rgba(212,168,83,0.12); color: var(--accent); }
+.status-paid { background: rgba(154,139,120,0.12); color: var(--primary); }
+.status-making { background: rgba(91,141,239,0.1); color: #5B8DEF; }
+.status-shipped { background: rgba(125,211,160,0.12); color: var(--green); }
+
+.preview-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12rpx;
+  margin-bottom: 20rpx;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16rpx 0;
+  border-bottom: 1rpx solid var(--border-light);
+  font-size: 28rpx;
+}
+.info-row:last-child {
+  border-bottom: none;
+}
+.label {
+  color: var(--text-secondary);
+}
+.price {
+  font-weight: var(--font-weight-bold);
+  color: #E85D5D;
+  font-size: 30rpx;
+}
+.addr {
+  font-size: 26rpx;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}

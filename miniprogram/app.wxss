@@ -1,0 +1,142 @@
+/* === CSS 变量 === */
+page {
+  --page-bg: #F5F5F5;
+  --card-bg: #FFFFFF;
+  --primary: #9A8B78;
+  --primary-light: #C4B5A0;
+  --primary-dark: #7A6D5E;
+  --accent: #d4a853;
+  --pink: #f8b4c4;
+  --green: #7dd3a0;
+  --border: #EEEEEE;
+  --border-light: #F5F5F5;
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --text-tertiary: #999999;
+  --text-placeholder: #BBBBBB;
+  --radius-sm: 8rpx;
+  --radius-md: 12rpx;
+  --radius-lg: 16rpx;
+  --radius-xl: 24rpx;
+  --shadow-card: 0 2rpx 16rpx rgba(0,0,0,0.06);
+  --shadow-bar: 0 -2rpx 12rpx rgba(0,0,0,0.04);
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 600;
+  --space-page: 24rpx;
+
+  /* 基础 */
+  box-sizing: border-box;
+  font-size: 28rpx;
+  color: var(--text-primary);
+  background: var(--page-bg);
+  line-height: 1.5;
+}
+
+/* === 通用页面容器 === */
+.page,
+.cart-page,
+.profile-page,
+.orders-page,
+.designs-page,
+.addr-page,
+.detail-page,
+.diy-page {
+  min-height: 100vh;
+  background: var(--page-bg);
+  padding-bottom: 120rpx;
+}
+
+/* === 空状态 === */
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 120rpx 60rpx;
+  color: var(--text-tertiary);
+  font-size: 28rpx;
+}
+.empty-text {
+  color: var(--text-tertiary);
+  font-size: 28rpx;
+}
+.hint {
+  color: var(--text-placeholder);
+  font-size: 24rpx;
+  margin-top: 12rpx;
+}
+
+/* === 卡片 === */
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  padding: 32rpx;
+  margin: 24rpx;
+  box-shadow: var(--shadow-card);
+}
+.card-title {
+  font-size: 28rpx;
+  font-weight: var(--font-weight-medium);
+  color: var(--text-primary);
+  margin-bottom: 20rpx;
+}
+
+/* === 按钮通用 === */
+.go-btn {
+  margin-top: 32rpx;
+  background: var(--primary);
+  color: #fff;
+  font-size: 28rpx;
+  border-radius: var(--radius-md);
+  padding: 16rpx 48rpx;
+  border: none;
+}
+.btn-del {
+  color: var(--text-tertiary);
+  font-size: 26rpx;
+  background: transparent;
+  border: none;
+  padding: 12rpx 24rpx;
+}
+.btn-order {
+  background: var(--primary) !important;
+  color: #fff !important;
+  font-size: 24rpx !important;
+  border-radius: var(--radius-sm) !important;
+  padding: 12rpx 28rpx !important;
+  border: none !important;
+  line-height: 1.4 !important;
+}
+
+/* === 通用列表 === */
+.list {
+  padding: 0 24rpx;
+}
+
+/* === 珠子预览 === */
+.bead,
+.preview-bead {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56rpx;
+  height: 56rpx;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 22rpx;
+  font-weight: var(--font-weight-medium);
+  margin-right: 8rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0,0,0,0.12);
+}
+
+/* === 状态标签 === */
+.order-status {
+  font-size: 24rpx;
+  padding: 4rpx 16rpx;
+  border-radius: 20rpx;
+}
+.order-status.pending { color: var(--accent); background: rgba(212,168,83,0.1); }
+.order-status.paid { color: var(--primary); background: rgba(154,139,120,0.1); }
+.order-status.making { color: #5B8DEF; background: rgba(91,141,239,0.1); }
+.order-status.shipped { color: var(--green); background: rgba(125,211,160,0.15); }

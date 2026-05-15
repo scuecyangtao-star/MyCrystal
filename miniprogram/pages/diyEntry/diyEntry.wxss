@@ -1,0 +1,99 @@
+/* DIY入口 */
+.header {
+  padding: 48rpx 40rpx 24rpx;
+}
+.title {
+  font-size: 40rpx;
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 8rpx;
+}
+.desc {
+  font-size: 26rpx;
+  color: var(--text-tertiary);
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 24rpx;
+}
+.product-card {
+  width: calc(50% - 32rpx);
+  margin: 12rpx 16rpx;
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  padding: 36rpx 20rpx;
+  text-align: center;
+  box-shadow: var(--shadow-card);
+}
+.product-icon {
+  font-size: 56rpx;
+  display: block;
+  margin-bottom: 12rpx;
+}
+.product-name {
+  font-size: 28rpx;
+  color: var(--text-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+.section {
+  padding: 32rpx 24rpx 0;
+}
+.section-title {
+  font-size: 32rpx;
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  margin-bottom: 16rpx;
+  display: block;
+}
+.template-list {
+  display: flex;
+  flex-direction: column;
+}
+.template-card {
+  display: flex;
+  align-items: center;
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  padding: 24rpx 28rpx;
+  margin-bottom: 16rpx;
+  box-shadow: var(--shadow-card);
+}
+.template-preview {
+  width: 80rpx;
+  height: 80rpx;
+  background: #FAF7F2;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20rpx;
+}
+.template-icon {
+  font-size: 40rpx;
+}
+.template-info {
+  flex: 1;
+}
+.template-name {
+  font-size: 28rpx;
+  font-weight: var(--font-weight-medium);
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4rpx;
+}
+.template-desc {
+  font-size: 24rpx;
+  color: var(--text-tertiary);
+}
+.template-btn {
+  font-size: 26rpx;
+  color: var(--primary);
+  font-weight: var(--font-weight-medium);
+  padding: 12rpx 24rpx;
+  background: rgba(154,139,120,0.08);
+  border-radius: var(--radius-sm);
+}

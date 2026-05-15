@@ -1,16 +1,16 @@
 // 模拟数据 - 后续可对接云开发
 const BANNER_IMAGES = [
-  '/images/banner.png',
-  '/images/banner.png',
-  '/images/banner.png'
+  { type: 'color', bg: '#9A8B78', text: 'DIY 专属饰品', sub: '手链 · 手机链 · 手工定制' },
+  { type: 'color', bg: '#d4a853', text: '自由搭配', sub: '主题 · 主珠 · 配珠 · 吊坠' },
+  { type: 'color', bg: '#C4B5A0', text: '限时优惠', sub: '新用户首单立减 5 元' }
 ];
 
 const PRODUCT_TYPES = [
-  { id: 'bracelet', name: '手链', icon: '/images/cat-bracelet.png', emoji: '📿' },
-  { id: 'phone-chain', name: '手机链', icon: '/images/cat-phone-chain.png', emoji: '📱' },
-  { id: 'bag-charm', name: '包挂', icon: '/images/cat-bag-charm.png', emoji: '👜' },
-  { id: 'car-hang', name: '车载挂件', icon: '/images/cat-car-hang.png', emoji: '🚗' },
-  { id: 'keychain', name: '钥匙链', icon: '/images/cat-keychain.png', emoji: '🔑' }
+  { id: 'bracelet', name: '手链', icon: '/cat-bracelet.png', emoji: '📿' },
+  { id: 'phone-chain', name: '手机链', icon: '/cat-phone-chain.png', emoji: '📱' },
+  { id: 'bag-charm', name: '包挂', icon: '/cat-bag-charm.png', emoji: '👜' },
+  { id: 'car-hang', name: '车载挂件', icon: '/cat-car-hang.png', emoji: '🚗' },
+  { id: 'keychain', name: '钥匙链', icon: '/cat-keychain.png', emoji: '🔑' }
 ];
 
 const PRESET_TEMPLATES = [

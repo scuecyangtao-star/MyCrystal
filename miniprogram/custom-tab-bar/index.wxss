@@ -1,0 +1,49 @@
+/* 自定义TabBar */
+.tab-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #FFFFFF;
+  z-index: 999;
+  box-shadow: 0 -2rpx 16rpx rgba(0,0,0,0.06);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.tab-ridge {
+  height: 2rpx;
+  background: transparent;
+}
+.tab-list {
+  display: flex;
+  align-items: center;
+  height: 100rpx;
+}
+.tab-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+}
+.tab-icon {
+  width: 44rpx;
+  height: 44rpx;
+  margin-bottom: 4rpx;
+}
+.tab-text {
+  font-size: 20rpx;
+  color: #9A9A9A;
+  line-height: 1.2;
+}
+.tab-item.active .tab-text {
+  color: #9A8B78;
+  font-weight: 500;
+}
+
+/* DIY 中间凸起图标 */
+.diy-icon .tab-icon {
+  width: 52rpx;
+  height: 52rpx;
+}

@@ -1,0 +1,47 @@
+/* 地址列表 */
+.addr-page {
+  padding: 24rpx;
+}
+
+.addr-card {
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  padding: 28rpx;
+  margin-bottom: 16rpx;
+  box-shadow: var(--shadow-card);
+}
+.addr-main {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12rpx;
+}
+.addr-name {
+  font-size: 30rpx;
+  font-weight: var(--font-weight-medium);
+  color: var(--text-primary);
+  margin-right: 20rpx;
+}
+.addr-phone {
+  font-size: 28rpx;
+  color: var(--text-secondary);
+}
+.addr-detail {
+  font-size: 26rpx;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.add-btn {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 28rpx;
+  padding-bottom: calc(28rpx + env(safe-area-inset-bottom));
+  background: var(--card-bg);
+  color: var(--primary);
+  font-size: 30rpx;
+  font-weight: var(--font-weight-medium);
+  box-shadow: var(--shadow-bar);
+}

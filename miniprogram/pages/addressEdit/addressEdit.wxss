@@ -1,7 +1,7 @@
 .addr-edit-page {
   min-height: 100vh;
   background: var(--page-bg);
-  padding: var(--space-page) 40rpx 120rpx;
+  padding: 24rpx;
 }
 
 .form {
@@ -14,40 +14,41 @@
 .row {
   display: flex;
   align-items: center;
-  padding: 32rpx 40rpx;
-  border-bottom: 1rpx solid var(--border);
+  padding: 32rpx 28rpx;
+  border-bottom: 1rpx solid var(--border-light);
   position: relative;
 }
 .row:last-child { border-bottom: none; }
 .label {
-  width: 160rpx;
+  width: 150rpx;
   font-size: 28rpx;
   color: var(--text-primary);
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--font-weight-medium);
+  flex-shrink: 0;
 }
 .input, .textarea {
   flex: 1;
   font-size: 28rpx;
   color: var(--text-primary);
-}
-.textarea {
-  min-height: 120rpx;
   padding: 0;
 }
-.arrow {
+.input::placeholder, .textarea::placeholder {
   color: var(--text-placeholder);
-  font-size: 32rpx;
-  margin-left: 16rpx;
+}
+.textarea {
+  min-height: 100rpx;
+  padding: 0;
 }
 
 .btn-save {
   background: var(--primary);
   color: #fff;
   font-size: 30rpx;
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--font-weight-medium);
   border: none;
   border-radius: var(--radius-lg);
   padding: 28rpx;
+  width: 100%;
 }
 .btn-del-wrap {
   margin-top: 32rpx;
@@ -59,4 +60,8 @@
   font-size: 26rpx;
   border: none;
   padding: 20rpx;
+  line-height: 1.4;
+}
+.btn-del::after {
+  border: none;
 }
